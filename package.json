@@ -1,0 +1,39 @@
+{
+  "name": "@cookiex-react/dom-reanimated",
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "repository": "https://github.com/dev-cookiex/react-dom-reanimated.git",
+  "author": "Tony <tony.js@zoho.eu>",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack serve --config webpack.config.ts --mode development",
+    "build": "rm -rf dist; tsc"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.5",
+    "@cookiex-react/eslint-config": "^0.1.5",
+    "@types/react": "^16.9.56",
+    "@types/react-dom": "^16.9.9",
+    "@types/webpack-dev-server": "^3.11.1",
+    "babel-loader": "^8.2.1",
+    "eslint": "^7.13.0",
+    "html-webpack-plugin": "^4.5.0",
+    "pug": "^3.0.0",
+    "pug-loader": "^2.4.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "ts-loader": "^8.0.11",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.1.2",
+    "webpack": "^5.4.0",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "@cookiex-react/dom-flexbox": "^0.0.2",
+    "@cookiex-react/forward-component": "^0.2.5",
+    "@cookiex-react/use-refs": "^1.0.0"
+  }
+}

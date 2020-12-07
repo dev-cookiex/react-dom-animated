@@ -1,0 +1,7 @@
+{
+  "extends": "@cookiex-react",
+  "globals": {
+    "globalThis": true,
+    "JSX": true
+  }
+}
