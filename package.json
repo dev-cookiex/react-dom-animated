@@ -1,5 +1,5 @@
 {
-  "name": "@cookiex-react/dom-reanimated",
+  "name": "@cookiex-react/dom-animated",
   "version": "0.0.0",
   "main": "dist/index.js",
   "repository": "https://github.com/dev-cookiex/react-dom-reanimated.git",
