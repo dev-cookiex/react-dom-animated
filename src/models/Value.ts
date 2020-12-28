@@ -1,5 +1,8 @@
+import add from '../calc/add'
+import divide from '../calc/divide'
+import multiply from '../calc/multiply'
+import subtract from '../calc/subtract'
 import AnimationListener from './AnimationListener'
-import Interpolation from './Interpolation'
 import Mapper from './Mapper'
 
 /* eslint-disable prefer-arrow/prefer-arrow-functions */
@@ -31,8 +34,10 @@ class Value extends AnimationListener<number> {
     return this
   }
 
-  public interpolation = <O extends string | number>( configuration: Interpolation.Configuration<number, O> ) =>
-    new Interpolation<number, O>( this, configuration )
+  public divide( by: number | AnimationListener<number> ) { return divide( this, by ) }
+  public multiply( by: number | AnimationListener<number> ) { return multiply( this, by ) }
+  public subtract( by: number | AnimationListener<number> ) { return subtract( this, by ) }
+  public add( by: number | AnimationListener<number> ) { return add( this, by ) }
 
   public map = <O>( map: Mapper.Map<number, O> ) => new Mapper<number, O>( this, map )
 

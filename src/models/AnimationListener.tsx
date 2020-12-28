@@ -1,8 +1,10 @@
-/* eslint-disable prefer-arrow/prefer-arrow-functions */
+import Interpolation from './Interpolation'
 abstract class AnimationListener<T> {
   private listeners: ( ( current: T ) => void )[] = []
+  protected _last: T
 
   protected _call = ( value: T ) => {
+    this._last = value
     this.listeners.forEach( listener => listener( value ) )
     return this
   }
@@ -17,6 +19,9 @@ abstract class AnimationListener<T> {
     else this.listeners.splice( this.listeners.indexOf( listener ), 1 )
     return this
   }
+
+  public interpolation = <O extends string | number>( configuration: Interpolation.Configuration<T, O> ) =>
+    new Interpolation<T, O>( this, configuration )
 
   public abstract get(): any
 }
