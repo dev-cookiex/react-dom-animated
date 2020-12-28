@@ -1,4 +1,5 @@
 import AnimationListener from './AnimationListener'
+import Interpolation from './Interpolation'
 
 class BaseCalc extends AnimationListener<number> {
   constructor(
@@ -28,6 +29,8 @@ class BaseCalc extends AnimationListener<number> {
   }
 
   public get = () => this._last
+  public interpolation = <O extends string | number>( configuration: Interpolation.Configuration<number, O> ) =>
+    new Interpolation<number, O>( this, configuration )
 }
 
 export default BaseCalc

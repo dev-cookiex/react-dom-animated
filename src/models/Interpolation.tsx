@@ -77,6 +77,9 @@ class Interpolation<I, O extends number | string> extends AnimationListener<O> {
     this.output = Object.assign( numbers, r )
     return true
   }
+
+  public interpolation = <O2 extends string | number>( configuration: Interpolation.Configuration<O, O2> ) =>
+    new Interpolation<O, O2>( this, configuration )
 }
 
 namespace Interpolation {

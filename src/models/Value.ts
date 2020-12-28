@@ -3,6 +3,7 @@ import divide from '../calc/divide'
 import multiply from '../calc/multiply'
 import subtract from '../calc/subtract'
 import AnimationListener from './AnimationListener'
+import Interpolation from './Interpolation'
 import Mapper from './Mapper'
 
 /* eslint-disable prefer-arrow/prefer-arrow-functions */
@@ -38,8 +39,10 @@ class Value extends AnimationListener<number> {
   public multiply( by: number | AnimationListener<number> ) { return multiply( this, by ) }
   public subtract( by: number | AnimationListener<number> ) { return subtract( this, by ) }
   public add( by: number | AnimationListener<number> ) { return add( this, by ) }
-
   public map = <O>( map: Mapper.Map<number, O> ) => new Mapper<number, O>( this, map )
+
+  public interpolation = <O extends string | number>( configuration: Interpolation.Configuration<number, O> ) =>
+    new Interpolation<number, O>( this, configuration )
 
   public merge = () => {
     this._value += this._offset
