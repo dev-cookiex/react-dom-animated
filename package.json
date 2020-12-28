@@ -1,6 +1,6 @@
 {
   "name": "@cookiex-react/dom-animated",
-  "version": "0.0.1",
+  "version": "0.0.2-16d6b93.0",
   "main": "dist/index.js",
   "repository": "https://github.com/dev-cookiex/react-dom-reanimated.git",
   "author": "Tony <tony.js@zoho.eu>",
